@@ -1,0 +1,41 @@
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+BASE=$1
+python3 "${SCRIPT_DIR}/import_csv.py" \
+    --nodes=Continent="${BASE}/Continent.csv" \
+    --nodes=Country="${BASE}/Country.csv" \
+    --nodes=City="${BASE}/City.csv" \
+    --nodes=University="${BASE}/University.csv" \
+    --nodes=Company="${BASE}/Company.csv" \
+    --nodes=TagClass="${BASE}/TagClass.csv" \
+    --nodes=Tag="${BASE}/Tag.csv" \
+    --nodes=Forum="${BASE}/Forum.csv" \
+    --nodes=Person="${BASE}/Person.csv" \
+    --nodes=Message:Comment="${BASE}/Comment.csv" \
+    --nodes=Message:Post="${BASE}/Post.csv" \
+    --relationships=IS_PART_OF="${BASE}/Country_isPartOf_Continent.csv" \
+    --relationships=IS_PART_OF="${BASE}/City_isPartOf_Country.csv" \
+    --relationships=IS_SUBCLASS_OF="${BASE}/TagClass_isSubclassOf_TagClass.csv" \
+    --relationships=IS_LOCATED_IN="${BASE}/University_isLocatedIn_City.csv" \
+    --relationships=IS_LOCATED_IN="${BASE}/Company_isLocatedIn_Country.csv" \
+    --relationships=HAS_TYPE="${BASE}/Tag_hasType_TagClass.csv" \
+    --relationships=HAS_CREATOR="${BASE}/Comment_hasCreator_Person.csv" \
+    --relationships=IS_LOCATED_IN="${BASE}/Comment_isLocatedIn_Country.csv" \
+    --relationships=REPLY_OF="${BASE}/Comment_replyOf_Comment.csv" \
+    --relationships=REPLY_OF="${BASE}/Comment_replyOf_Post.csv" \
+    --relationships=CONTAINER_OF="${BASE}/Forum_containerOf_Post.csv" \
+    --relationships=HAS_MEMBER="${BASE}/Forum_hasMember_Person.csv" \
+    --relationships=HAS_MODERATOR="${BASE}/Forum_hasModerator_Person.csv" \
+    --relationships=HAS_TAG="${BASE}/Forum_hasTag_Tag.csv" \
+    --relationships=HAS_INTEREST="${BASE}/Person_hasInterest_Tag.csv" \
+    --relationships=IS_LOCATED_IN="${BASE}/Person_isLocatedIn_City.csv" \
+    --relationships=KNOWS="${BASE}/Person_knows_Person.csv" \
+    --relationships=LIKES="${BASE}/Person_likes_Comment.csv" \
+    --relationships=LIKES="${BASE}/Person_likes_Post.csv" \
+    --relationships=HAS_CREATOR="${BASE}/Post_hasCreator_Person.csv" \
+    --relationships=HAS_TAG="${BASE}/Comment_hasTag_Tag.csv" \
+    --relationships=HAS_TAG="${BASE}/Post_hasTag_Tag.csv" \
+    --relationships=IS_LOCATED_IN="${BASE}/Post_isLocatedIn_Country.csv" \
+    --relationships=STUDY_AT="${BASE}/Person_studyAt_University.csv" \
+    --relationships=WORK_AT="${BASE}/Person_workAt_Company.csv" \
+    --delimiter '|'
+

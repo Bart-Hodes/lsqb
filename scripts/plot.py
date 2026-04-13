@@ -5,8 +5,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.gridspec as gridspec
 
-df = pd.read_csv("my.csv", header=None, sep="\t", names=["system", "variant", "query", "time", "result"])
-#df = df.pivot(index="query", columns=["system"], values=["time"])
+df = pd.read_csv("my.csv", header=None, sep="\t", names=["system", "variant", "sf", "query", "time", "result"])
 df = df.pivot(index="system", columns=["query"], values=["time"])
 
 print(df)
