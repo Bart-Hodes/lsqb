@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
-
-set -eu
-set -o pipefail
+set -euo pipefail
 
 cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd ..
 
+# Load environment
 . avantgraph/vars.sh
 . scripts/import-vars.sh
 
@@ -15,32 +14,56 @@ AVANTGRAPH="${AG_BIN}/avantgraph"
 RESULTS_FILE="results/results.csv"
 mkdir -p results
 
-# q7-q9 use OPTIONAL MATCH / anti-joins which are not yet supported
+TIMEOUT_SEC=30
+
+echo "query,threads,sf,duration_s,result,status" > "${RESULTS_FILE}"
+
 for i in $(seq 1 6); do
     QUERY_FILE="cypher/q${i}.cypher"
-    if [ ! -f "${QUERY_FILE}" ]; then
-        echo "WARNING: Query file not found: ${QUERY_FILE}" >&2
+
+    if [[ ! -f "${QUERY_FILE}" ]]; then
+        echo "WARNING: missing ${QUERY_FILE}" >&2
         continue
     fi
 
-    echo "Query ${i}"
+    echo "Running query ${i}"
+
+    RAW=$(mktemp)
 
     START=$(date +%s%N)
-    OUTPUT=$("${AVANTGRAPH}" \
+
+    # Run with timeout and capture everything safely
+    timeout --kill-after=5 "${TIMEOUT_SEC}" \
+        "${AVANTGRAPH}" \
         --query-type=cypher \
-        --read-only \
         --enable-morsel-pipelines \
         "${AG_GRAPH_DIR}" \
-        "${QUERY_FILE}" 2>/dev/null) || true
+        "${QUERY_FILE}" \
+        > "${RAW}" 2>&1
+
+    RC=$?
+
     END=$(date +%s%N)
 
-    DURATION=$(awk "BEGIN { printf \"%.4f\", (${END} - ${START}) / 1000000000 }")
+    DURATION=$(awk "BEGIN { printf \"%.6f\", (${END} - ${START}) / 1e9 }")
 
-    # Extract the count from output like: "tuple:  %count=int:8773828"
-    RESULT=$(echo "${OUTPUT}" | grep -oP '(?<=%count=int:)\d+' | head -1)
-    if [ -z "${RESULT}" ]; then
-        RESULT="N/A"
+    # Status handling
+    if [[ $RC -eq 124 ]]; then
+        STATUS="TIMEOUT"
+    elif [[ $RC -ne 0 ]]; then
+        STATUS="FAIL"
+    else
+        STATUS="OK"
     fi
 
-    printf "AvantGraph-Morsel\t${NUM_THREADS} threads\t${SF}\t${i}\t${DURATION}\t${RESULT}\n" >> "${RESULTS_FILE}"
+    # Extract result safely
+    RESULT=$(grep -oP '(?<=%count=int:)\d+' "${RAW}" | head -1 || true)
+    RESULT=${RESULT:-N/A}
+
+    echo "${i},${NUM_THREADS},${SF},${DURATION},${RESULT},${STATUS}" \
+        >> "${RESULTS_FILE}"
+
+    rm -f "${RAW}"
 done
+
+echo "Done. Results written to ${RESULTS_FILE}"

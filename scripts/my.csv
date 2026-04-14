@@ -1,12 +1,195 @@
-DuckDB	4	1	0.0075	3
-DuckDB	4	2	0.0013	11
-DuckDB	4	3	0.0009	2
-DuckDB	4	4	0.0011	6
-DuckDB	4	5	0.0077	48
-DuckDB	4	6	0.0012	16
-PostgreSQL		1	0.0077	3
-PostgreSQL		2	0.3431	11
-PostgreSQL		3	0.1189	2
-PostgreSQL		4	0.0010	6
-PostgreSQL		5	0.0833	48
-PostgreSQL		6	0.0028	16
+Neo4j-6.1.dev0		0.1	1	0.8079	8773828
+Neo4j-6.1.dev0		0.1	2	0.2240	82990
+Neo4j-6.1.dev0		0.1	3	0.4549	30456
+Neo4j-6.1.dev0		0.1	4	0.5479	784511
+Neo4j-6.1.dev0		0.1	5	0.4620	1079722
+Neo4j-6.1.dev0		0.1	6	1.2740	55607896
+Neo4j-6.1.dev0		0.1	7	0.7810	1628132
+Neo4j-6.1.dev0		0.1	8	0.9394	537142
+Neo4j-6.1.dev0		0.1	9	1.2831	51009398
+Neo4j-6.1.dev0		0.1	1	0.8142	8773828
+Neo4j-6.1.dev0		0.1	2	0.2163	82990
+Neo4j-6.1.dev0		0.1	3	0.4831	30456
+Neo4j-6.1.dev0		0.1	4	0.5477	784511
+Neo4j-6.1.dev0		0.1	5	0.4530	1079722
+Neo4j-6.1.dev0		0.1	6	1.2756	55607896
+Neo4j-6.1.dev0		0.1	7	0.7924	1628132
+Neo4j-6.1.dev0		0.1	8	0.9242	537142
+Neo4j-6.1.dev0		0.1	9	1.3217	51009398
+Neo4j-6.1.dev0		0.1	1	0.8002	8773828
+Neo4j-6.1.dev0		0.1	2	0.2095	82990
+Neo4j-6.1.dev0		0.1	3	0.4385	30456
+Neo4j-6.1.dev0		0.1	4	0.5534	784511
+Neo4j-6.1.dev0		0.1	5	0.4689	1079722
+Neo4j-6.1.dev0		0.1	6	1.2713	55607896
+Neo4j-6.1.dev0		0.1	7	0.7758	1628132
+Neo4j-6.1.dev0		0.1	8	0.9421	537142
+Neo4j-6.1.dev0		0.1	9	1.2910	51009398
+Neo4j-6.1.dev0		0.1	1	0.8089	8773828
+Neo4j-6.1.dev0		0.1	2	0.2116	82990
+Neo4j-6.1.dev0		0.1	3	0.4330	30456
+Neo4j-6.1.dev0		0.1	4	0.5486	784511
+Neo4j-6.1.dev0		0.1	5	0.4574	1079722
+Neo4j-6.1.dev0		0.1	6	1.2671	55607896
+Neo4j-6.1.dev0		0.1	7	0.7946	1628132
+Neo4j-6.1.dev0		0.1	8	0.9234	537142
+Neo4j-6.1.dev0		0.1	9	1.3066	51009398
+Neo4j-6.1.dev0		0.1	1	0.7541	8773828
+Neo4j-6.1.dev0		0.1	2	0.2132	82990
+Neo4j-6.1.dev0		0.1	3	0.4437	30456
+Neo4j-6.1.dev0		0.1	4	0.5343	784511
+Neo4j-6.1.dev0		0.1	5	0.4684	1079722
+Neo4j-6.1.dev0		0.1	6	1.2918	55607896
+Neo4j-6.1.dev0		0.1	7	0.7551	1628132
+Neo4j-6.1.dev0		0.1	8	0.9367	537142
+Neo4j-6.1.dev0		0.1	9	1.2947	51009398
+DuckDB-1.4.4	24 threads	0.1	1	0.0302	8773828
+DuckDB-1.4.4	24 threads	0.1	2	0.0076	82990
+DuckDB-1.4.4	24 threads	0.1	3	0.0109	30456
+DuckDB-1.4.4	24 threads	0.1	4	0.0434	784511
+DuckDB-1.4.4	24 threads	0.1	5	0.0173	1079722
+DuckDB-1.4.4	24 threads	0.1	6	0.1815	55607896
+DuckDB-1.4.4	24 threads	0.1	7	0.0178	1628132
+DuckDB-1.4.4	24 threads	0.1	8	0.0270	537142
+DuckDB-1.4.4	24 threads	0.1	9	0.6495	51009398
+DuckDB-1.4.4	24 threads	0.1	1	0.0340	8773828
+DuckDB-1.4.4	24 threads	0.1	2	0.0068	82990
+DuckDB-1.4.4	24 threads	0.1	3	0.0114	30456
+DuckDB-1.4.4	24 threads	0.1	4	0.0412	784511
+DuckDB-1.4.4	24 threads	0.1	5	0.0174	1079722
+DuckDB-1.4.4	24 threads	0.1	6	0.1844	55607896
+DuckDB-1.4.4	24 threads	0.1	7	0.0177	1628132
+DuckDB-1.4.4	24 threads	0.1	8	0.0277	537142
+DuckDB-1.4.4	24 threads	0.1	9	0.6500	51009398
+DuckDB-1.4.4	24 threads	0.1	1	0.0303	8773828
+DuckDB-1.4.4	24 threads	0.1	2	0.0085	82990
+DuckDB-1.4.4	24 threads	0.1	3	0.0116	30456
+DuckDB-1.4.4	24 threads	0.1	4	0.0426	784511
+DuckDB-1.4.4	24 threads	0.1	5	0.0138	1079722
+DuckDB-1.4.4	24 threads	0.1	6	0.1793	55607896
+DuckDB-1.4.4	24 threads	0.1	7	0.0189	1628132
+DuckDB-1.4.4	24 threads	0.1	8	0.0275	537142
+DuckDB-1.4.4	24 threads	0.1	9	0.6570	51009398
+DuckDB-1.4.4	24 threads	0.1	1	0.0335	8773828
+DuckDB-1.4.4	24 threads	0.1	2	0.0082	82990
+DuckDB-1.4.4	24 threads	0.1	3	0.0111	30456
+DuckDB-1.4.4	24 threads	0.1	4	0.0433	784511
+DuckDB-1.4.4	24 threads	0.1	5	0.0166	1079722
+DuckDB-1.4.4	24 threads	0.1	6	0.1820	55607896
+DuckDB-1.4.4	24 threads	0.1	7	0.0183	1628132
+DuckDB-1.4.4	24 threads	0.1	8	0.0243	537142
+DuckDB-1.4.4	24 threads	0.1	9	0.6517	51009398
+DuckDB-1.4.4	24 threads	0.1	1	0.0335	8773828
+DuckDB-1.4.4	24 threads	0.1	2	0.0079	82990
+DuckDB-1.4.4	24 threads	0.1	3	0.0110	30456
+DuckDB-1.4.4	24 threads	0.1	4	0.0452	784511
+DuckDB-1.4.4	24 threads	0.1	5	0.0157	1079722
+DuckDB-1.4.4	24 threads	0.1	6	0.1783	55607896
+DuckDB-1.4.4	24 threads	0.1	7	0.0173	1628132
+DuckDB-1.4.4	24 threads	0.1	8	0.0253	537142
+DuckDB-1.4.4	24 threads	0.1	9	0.6531	51009398
+KuzuDB-0.11.3	24 threads	0.1	1	0.5316	8773828
+KuzuDB-0.11.3	24 threads	0.1	2	0.0322	82990
+KuzuDB-0.11.3	24 threads	0.1	3	0.1018	30456
+KuzuDB-0.11.3	24 threads	0.1	4	0.0286	784511
+KuzuDB-0.11.3	24 threads	0.1	5	0.0286	1079722
+KuzuDB-0.11.3	24 threads	0.1	6	0.1120	55607896
+KuzuDB-0.11.3	24 threads	0.1	7	0.0292	1628132
+KuzuDB-0.11.3	24 threads	0.1	8	0.1146	537142
+KuzuDB-0.11.3	24 threads	0.1	9	0.1626	51009398
+KuzuDB-0.11.3	24 threads	0.1	1	0.5370	8773828
+KuzuDB-0.11.3	24 threads	0.1	2	0.0276	82990
+KuzuDB-0.11.3	24 threads	0.1	3	0.1029	30456
+KuzuDB-0.11.3	24 threads	0.1	4	0.0188	784511
+KuzuDB-0.11.3	24 threads	0.1	5	0.0244	1079722
+KuzuDB-0.11.3	24 threads	0.1	6	0.1103	55607896
+KuzuDB-0.11.3	24 threads	0.1	7	0.0253	1628132
+KuzuDB-0.11.3	24 threads	0.1	8	0.1152	537142
+KuzuDB-0.11.3	24 threads	0.1	9	0.1698	51009398
+KuzuDB-0.11.3	24 threads	0.1	1	0.5288	8773828
+KuzuDB-0.11.3	24 threads	0.1	2	0.0255	82990
+KuzuDB-0.11.3	24 threads	0.1	3	0.1015	30456
+KuzuDB-0.11.3	24 threads	0.1	4	0.0270	784511
+KuzuDB-0.11.3	24 threads	0.1	5	0.0323	1079722
+KuzuDB-0.11.3	24 threads	0.1	6	0.1080	55607896
+KuzuDB-0.11.3	24 threads	0.1	7	0.0253	1628132
+KuzuDB-0.11.3	24 threads	0.1	8	0.1100	537142
+KuzuDB-0.11.3	24 threads	0.1	9	0.1629	51009398
+KuzuDB-0.11.3	24 threads	0.1	1	0.4579	8773828
+KuzuDB-0.11.3	24 threads	0.1	2	0.0275	82990
+KuzuDB-0.11.3	24 threads	0.1	3	0.1006	30456
+KuzuDB-0.11.3	24 threads	0.1	4	0.0204	784511
+KuzuDB-0.11.3	24 threads	0.1	5	0.0241	1079722
+KuzuDB-0.11.3	24 threads	0.1	6	0.1082	55607896
+KuzuDB-0.11.3	24 threads	0.1	7	0.0303	1628132
+KuzuDB-0.11.3	24 threads	0.1	8	0.1130	537142
+KuzuDB-0.11.3	24 threads	0.1	9	0.1606	51009398
+KuzuDB-0.11.3	24 threads	0.1	1	0.5293	8773828
+KuzuDB-0.11.3	24 threads	0.1	2	0.0321	82990
+KuzuDB-0.11.3	24 threads	0.1	3	0.0990	30456
+KuzuDB-0.11.3	24 threads	0.1	4	0.0214	784511
+KuzuDB-0.11.3	24 threads	0.1	5	0.0262	1079722
+KuzuDB-0.11.3	24 threads	0.1	6	0.1089	55607896
+KuzuDB-0.11.3	24 threads	0.1	7	0.0268	1628132
+KuzuDB-0.11.3	24 threads	0.1	8	0.1101	537142
+KuzuDB-0.11.3	24 threads	0.1	9	0.1624	51009398
+AvantGraph	24 threads	0.1	1	0.4397	8773828
+AvantGraph	24 threads	0.1	2	1.1654	82990
+AvantGraph	24 threads	0.1	3	1.4836	30456
+AvantGraph	24 threads	0.1	4	0.6228	784511
+AvantGraph	24 threads	0.1	5	0.4419	1079722
+AvantGraph	24 threads	0.1	6	0.7483	55607896
+AvantGraph	24 threads	0.1	1	0.4295	8773828
+AvantGraph	24 threads	0.1	2	1.1583	82990
+AvantGraph	24 threads	0.1	3	1.4794	30456
+AvantGraph	24 threads	0.1	4	0.6418	784511
+AvantGraph	24 threads	0.1	5	0.4476	1079722
+AvantGraph	24 threads	0.1	6	0.8407	55607896
+AvantGraph	24 threads	0.1	1	0.4463	8773828
+AvantGraph	24 threads	0.1	2	1.1396	82990
+AvantGraph	24 threads	0.1	3	1.5012	30456
+AvantGraph	24 threads	0.1	4	0.6260	784511
+AvantGraph	24 threads	0.1	5	0.4254	1079722
+AvantGraph	24 threads	0.1	6	0.8683	55607896
+AvantGraph	24 threads	0.1	1	0.4406	8773828
+AvantGraph	24 threads	0.1	2	1.1458	82990
+AvantGraph	24 threads	0.1	3	1.5252	30456
+AvantGraph	24 threads	0.1	4	0.6248	784511
+AvantGraph	24 threads	0.1	5	0.4339	1079722
+AvantGraph	24 threads	0.1	6	0.7633	55607896
+AvantGraph	24 threads	0.1	1	0.4246	8773828
+AvantGraph	24 threads	0.1	2	1.1582	82990
+AvantGraph	24 threads	0.1	3	1.5200	30456
+AvantGraph	24 threads	0.1	4	0.6418	784511
+AvantGraph	24 threads	0.1	5	0.4480	1079722
+AvantGraph	24 threads	0.1	6	0.8225	55607896
+AvantGraph-Morsel	24 threads	0.1	1	0.4626	8773828
+AvantGraph-Morsel	24 threads	0.1	2	1.1581	82990
+AvantGraph-Morsel	24 threads	0.1	3	1.4924	30456
+AvantGraph-Morsel	24 threads	0.1	4	0.6662	784511
+AvantGraph-Morsel	24 threads	0.1	5	0.4432	1079722
+AvantGraph-Morsel	24 threads	0.1	6	0.7936	55607896
+AvantGraph-Morsel	24 threads	0.1	1	0.4054	8773828
+AvantGraph-Morsel	24 threads	0.1	2	1.1703	82990
+AvantGraph-Morsel	24 threads	0.1	3	1.4900	30456
+AvantGraph-Morsel	24 threads	0.1	4	0.6544	784511
+AvantGraph-Morsel	24 threads	0.1	5	0.4392	1079722
+AvantGraph-Morsel	24 threads	0.1	6	0.7999	55607896
+AvantGraph-Morsel	24 threads	0.1	1	0.4106	8773828
+AvantGraph-Morsel	24 threads	0.1	2	1.1385	82990
+AvantGraph-Morsel	24 threads	0.1	3	1.4776	30456
+AvantGraph-Morsel	24 threads	0.1	4	0.6469	784511
+AvantGraph-Morsel	24 threads	0.1	5	0.4230	1079722
+AvantGraph-Morsel	24 threads	0.1	6	0.7883	55607896
+AvantGraph-Morsel	24 threads	0.1	1	0.4654	8773828
+AvantGraph-Morsel	24 threads	0.1	2	1.1517	82990
+AvantGraph-Morsel	24 threads	0.1	3	1.4834	30456
+AvantGraph-Morsel	24 threads	0.1	4	0.6410	784511
+AvantGraph-Morsel	24 threads	0.1	5	0.4077	1079722
+AvantGraph-Morsel	24 threads	0.1	6	0.8271	55607896
+AvantGraph-Morsel	24 threads	0.1	1	0.4305	8773828
+AvantGraph-Morsel	24 threads	0.1	2	1.1365	82990
+AvantGraph-Morsel	24 threads	0.1	3	1.4908	30456
+AvantGraph-Morsel	24 threads	0.1	4	0.6593	784511
+AvantGraph-Morsel	24 threads	0.1	5	0.4328	1079722
+AvantGraph-Morsel	24 threads	0.1	6	0.7768	55607896

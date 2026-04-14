@@ -9,4 +9,4 @@ cd ..
 . kuzu/vars.sh
 . scripts/import-vars.sh
 
-# do nothing
+rm -rf ${KUZU_DATA_DIR}/lsqb-database

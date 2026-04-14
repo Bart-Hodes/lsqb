@@ -6,6 +6,8 @@ import seaborn as sns
 import matplotlib.gridspec as gridspec
 
 df = pd.read_csv("my.csv", header=None, sep="\t", names=["system", "variant", "sf", "query", "time", "result"])
+# Take the median time across multiple runs per (system, sf, query)
+df = df.groupby(["system", "sf", "query"], as_index=False)["time"].median()
 df = df.pivot(index="system", columns=["query"], values=["time"])
 
 print(df)
