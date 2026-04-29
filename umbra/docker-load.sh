@@ -8,4 +8,4 @@ cd ..
 
 . umbra/vars.sh
 
-curl -s ${UMBRA_URL_PREFIX}${UMBRA_VERSION}.tar.gz | docker load
+docker pull ${UMBRA_DOCKER_IMAGE}

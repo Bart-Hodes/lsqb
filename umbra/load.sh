@@ -17,12 +17,13 @@ sed "s|PATHVAR|/data|" ${COMMON_SQL_DIR}/snb-load.sql > ${UMBRA_SQL_SCRATCH_DIR}
 
 echo -n "Creating and loading database . . ."
 docker run \
+    --user=$(id -u):$(id -g) \
+    --entrypoint=umbra-sql \
     --volume=${UMBRA_DATABASE_DIR}:/var/db/:z \
     --volume=${UMBRA_SQL_SCRATCH_DIR}:/sql/:z \
     --volume=${IMPORT_DATA_DIR_MERGED_FK}:/data/:z \
     ${UMBRA_DOCKER_IMAGE} \
-    umbra_sql \
-    --createdb \
+    -createdb \
       /var/db/ldbc.db \
       /sql/create-role.sql \
       /sql/schema.sql \

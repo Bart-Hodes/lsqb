@@ -8,9 +8,9 @@ set -o pipefail
 cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd ..
 
-SFS="0.1 0.3"
+SFS="0.1 0.3 1 3 5"
 #SFS="1 3 10"
-SYSTEMS="avantgraph avantgraph-morsel"
+SYSTEMS="neo4j duckdb kuzu hyper umbra avantgraph avantgraph-morsel"
 RUNS=1
 
 export SF

@@ -4,7 +4,6 @@ set -euo pipefail
 cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd ..
 
-# Load environment
 . avantgraph/vars.sh
 . scripts/import-vars.sh
 
@@ -15,8 +14,8 @@ RESULTS_FILE="results/results.csv"
 mkdir -p results
 
 TIMEOUT_SEC=30
-
-echo "query,threads,sf,duration_s,result,status" > "${RESULTS_FILE}"
+SYSTEM="AvantGraph"
+VARIANT="${NUM_THREADS} threads"
 
 for i in $(seq 1 6); do
     QUERY_FILE="cypher/q${i}.cypher"
@@ -30,39 +29,33 @@ for i in $(seq 1 6); do
 
     RAW=$(mktemp)
 
-    START=$(date +%s%N)
-
-    # Run with timeout and capture everything safely
+    RC=0
     timeout --kill-after=5 "${TIMEOUT_SEC}" \
         "${AVANTGRAPH}" \
+        --verbose \
         --query-type=cypher \
         "${AG_GRAPH_DIR}" \
         "${QUERY_FILE}" \
-        > "${RAW}" 2>&1
+        > "${RAW}" 2>&1 || RC=$?
 
-    RC=$?
-
-    END=$(date +%s%N)
-
-    DURATION=$(awk "BEGIN { printf \"%.6f\", (${END} - ${START}) / 1e9 }")
-
-    # Status handling
     if [[ $RC -eq 124 ]]; then
-        STATUS="TIMEOUT"
+        DURATION="${TIMEOUT_SEC}.0000"
+        RESULT="TIMEOUT"
     elif [[ $RC -ne 0 ]]; then
-        STATUS="FAIL"
+        DURATION="0.0000"
+        RESULT="FAIL"
     else
-        STATUS="OK"
+        WAIT=$(awk '/-----Wait Time-----/{getline; print $1; exit}' "${RAW}")
+        DURATION=$(awk "BEGIN { printf \"%.4f\", ${WAIT:-0} }")
+        RESULT=$(grep -oP '(?<=%count=int:)\d+' "${RAW}" | head -1 || true)
+        RESULT=${RESULT:-N/A}
     fi
 
-    # Extract result safely
-    RESULT=$(grep -oP '(?<=%count=int:)\d+' "${RAW}" | head -1 || true)
-    RESULT=${RESULT:-N/A}
-
-    echo "${i},${NUM_THREADS},${SF},${DURATION},${RESULT},${STATUS}" \
+    printf '%s\t%s\t%s\t%s\t%s\t%s\n' \
+        "${SYSTEM}" "${VARIANT}" "${SF}" "${i}" "${DURATION}" "${RESULT}" \
         >> "${RESULTS_FILE}"
 
     rm -f "${RAW}"
 done
 
-echo "Done. Results written to ${RESULTS_FILE}"
+echo "Done. Results appended to ${RESULTS_FILE}"

@@ -6,8 +6,8 @@ export COMMON_SQL_DIR=`pwd`/../sql
 export UMBRA_SQL_DIR=`pwd`/sql/
 export UMBRA_SQL_SCRATCH_DIR=`pwd`/scratch/sql
 export UMBRA_CONTAINER_NAME=lsqb-umb
-export UMBRA_VERSION=30b000783
-export UMBRA_DOCKER_IMAGE=umbra-release:${UMBRA_VERSION}
+export UMBRA_VERSION=latest
+export UMBRA_DOCKER_IMAGE=umbradb/umbra:${UMBRA_VERSION}
 
 if [ -z "${UMBRA_BUFFERSIZE+x}" ]; then
     export UMBRA_DOCKER_BUFFERSIZE_ENV_VAR=
