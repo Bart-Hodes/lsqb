@@ -10,8 +10,8 @@ cd ..
 
 SFS="0.1 0.3 1 3 5"
 #SFS="1 3 10"
-SYSTEMS="neo4j duckdb kuzu hyper umbra avantgraph avantgraph-morsel"
-RUNS=1
+SYSTEMS="avantgraph avantgraph-next"
+RUNS=5
 
 export SF
 for SF in ${SFS}; do
